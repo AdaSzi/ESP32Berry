@@ -1,3 +1,4 @@
+
 # Welcome to New ESP32Berry Project
 
 ## This is a new ESP32Berry project space based on T-Deck.
@@ -25,7 +26,7 @@ Use LovyanGFX instead of TFT_eSPI to update the screen. This makes it possible t
 
 ## Installation guide
 ### Windows
-1. Arduino IDE: Download and install the latest version of the Arduino IDE from the official website (https://www.arduino.cc/en/Main/Software).
+1. Arduino IDE: Download and install the latest version of the Arduino IDE from the [official website](https://www.arduino.cc/en/Main/Software).
 2. Install `esp32` (by Espressif) boards using `Tools` -> `Board` -> `Boards Manager`
 3. In `Arduino IDE` -> `Tools` select following options:
 	- `Board` -> `ESP32S3 Dev Module`
@@ -41,7 +42,7 @@ Use LovyanGFX instead of TFT_eSPI to update the screen. This makes it possible t
 	- `Upload Mode` -> `UART0/Hardware CDC`
 	- `Upload Speed` -> `921600`
 4. Install libraries:
-	1. Copy contents of `lib` directory from https://github.com/Xinyuan-LilyGO/T-Deck to your `libraries` folder (Most likely in your `Documents/Arduino/libraries`)
+	1. Copy **contents** of `lib` directory from [official T-Deck repository](https://github.com/Xinyuan-LilyGO/T-Deck) to your `libraries` folder (Most likely in your `Documents/Arduino/libraries`)
 	2. In `Arduino IDE` go to `Sketch` -> `Include Library` -> `Manage Libraries` search and install following libraries:
 		- `LovyanGFX` by lovyan03
 		- `ChatGPT_Client` by Eric Nam (**with** prerequisites)
