@@ -1,4 +1,3 @@
-
 # Welcome to New ESP32Berry Project
 
 ## This is a new ESP32Berry project space based on T-Deck.
@@ -24,6 +23,32 @@ Use LovyanGFX instead of TFT_eSPI to update the screen. This makes it possible t
 
 [![Video: Version 0.5](./misc/images/esp32berry_0.5.jpg)](https://youtu.be/5K6rSw9j5iY)
 
+## Installation guide
+### Windows
+1. Arduino IDE: Download and install the latest version of the Arduino IDE from the official website (https://www.arduino.cc/en/Main/Software).
+2. Install `esp32` (by Espressif) boards using `Tools` -> `Board` -> `Boards Manager`
+3. In `Arduino IDE` -> `Tools` select following options:
+	- `Board` -> `ESP32S3 Dev Module`
+	- `USB CDC On Boot` -> `Enable`
+	- `CPU Frequency` -> `240MHz`
+	- `USB DFU On Boot` -> `Disable`
+	- `Flash Mode` -> `QIO 80MHz`
+	- `Flash Size` -> `16MB(128Mb)`
+	- `USB Firmware MSC On Boot` -> `Disable`
+	- `PSRAM` -> `OPI PSRAM`
+	- `Partition Scheme` -> `16M Flash (3MB APP/9.9MB FATFS)`
+	- `USB Mode` -> `Hardware CDC and JIAG`
+	- `Upload Mode` -> `UART0/Hardware CDC`
+	- `Upload Speed` -> `921600`
+4. Install libraries:
+	1. Copy contents of `lib` directory from https://github.com/Xinyuan-LilyGO/T-Deck to your `libraries` folder (Most likely in your `Documents/Arduino/libraries`)
+	2. In `Arduino IDE` go to `Sketch` -> `Include Library` -> `Manage Libraries` search and install following libraries:
+		- `LovyanGFX` by lovyan03
+		- `ChatGPT_Client` by Eric Nam (**with** prerequisites)
+	3. Copy `lv_conf.h` from `LVGL_Setting` to your `libraries` folder (overwrite the old one)
+
+ESP32Berry project should now compile successfully in your Arduino IDE
+
 ### MIT License
 
 Copyright (c) 2023 Eric Nam
@@ -44,4 +69,4 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+SOFTWARE
